@@ -29,9 +29,6 @@ const Navbar = () => {
                 src="/assets/image.png" 
                 alt="GrowUp Logo" 
                 className="h-8 w-8 mr-2"
-                onError={(e) => {
-                  e.currentTarget.src = 'https://via.placeholder.com/32';
-                }}
               />
               GrowUp
             </Link>
