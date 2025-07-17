@@ -16,7 +16,7 @@ import threading
 import time
 import json
 import os
-import datetime
+# import datetime
 import logging
 import uuid
 from dotenv import load_dotenv
@@ -483,7 +483,7 @@ def serialize_doc(doc):
     for key, value in doc_copy.items():
         if isinstance(value, ObjectId):
             doc_copy[key] = str(value)
-        elif isinstance(value, datetime.datetime):
+        elif isinstance(value, datetime.now()):
             doc_copy[key] = value.isoformat()
     return doc_copy
 
@@ -1072,7 +1072,7 @@ async def place_order(order_data: OrderRequest):
             'target_price': target_price,
             'Email': email,
             'HoldingId': holding_id,
-            'created_at': datetime.datetime.now(),
+            'created_at': datetime.now(),
             'status': 'EXECUTED',  # Assume instant execution for simplicity
             'total_amount': total_cost
         }
