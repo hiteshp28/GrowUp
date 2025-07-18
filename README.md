@@ -58,9 +58,8 @@ pip install -r requirements.txt
 
 ## 🚀 Running the App
 
-Replace app.py with your actual script name if different.
 ```bash
-python app.py
+python combined_app.py
 ```
 
 ## 📚 Dependencies
