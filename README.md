@@ -54,38 +54,7 @@ Follow the steps below to set up the project from scratch:
 ```bash
 python -m venv venv
 .\venv\Scripts\activate
-```
-
-### 📦 2. Install Required Packages
-
-**Initial version-specific installs:**
-```bash
-python -m pip install werkzeug==2.0.3
-python -m pip install flask==2.0.3
-```
-
-**Then install the data libraries:**
-```bash
-python -m pip install jugaad-data pandas
-```
-
-**Optional: Upgrade to newer compatible versions:**
-```bash
-python -m pip install flask==2.2.5 werkzeug==2.2.3
-```
-
-### 🔍 3. Verify Installed Versions
-
-Run the following to confirm the installed versions:
-```bash
-python -m pip freeze | findstr "Flask Werkzeug"
-```
-
-Expected output:
-```
-Flask==2.2.5
-Werkzeug==2.2.3
-```
+pip install -r requirements.txt
 
 ## 🚀 Running the App
 
