@@ -38,11 +38,10 @@ GrowUp serves as a bridge between theoretical knowledge about stock markets and 
 
 ## 🛠️ Tech Stack
 
-- **Backend**: Flask (Python web framework)
+- **Backend**: NodeJs, ExpressJs and FastAPI (Python web framework)
 - **Data Processing**: jugaad-data, pandas
 - **Frontend**: HTML, CSS, JavaScript
-- **Database**: SQLite (for user data and portfolio tracking)
-
+- **Database**: MongoDB 
 ---
 
 ## ⚙️ Setup & Installation
