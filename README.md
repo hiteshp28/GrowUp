@@ -42,6 +42,7 @@ GrowUp serves as a bridge between theoretical knowledge about stock markets and 
 - **Data Processing**: jugaad-data, pandas
 - **Frontend**: HTML, CSS, JavaScript
 - **Database**: MongoDB 
+- **Other**: Websocket, JWT 
 ---
 
 ## ⚙️ Setup & Installation
