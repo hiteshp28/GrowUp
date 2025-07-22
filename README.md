@@ -36,7 +36,7 @@ As someone who started trading in my second year, I personally experienced the s
 ### ✅ Frontend
 - **React.js 18**
 - **WebSocket API / socket.io-client**
-- **Chart.js / D3.js** (optional for portfolio graphs)
+- **Chart.js**
 
 ### ✅ Node.js Utilities
 - **Node.js 18**
@@ -117,9 +117,9 @@ cd frontend
 npm install
 npm start
 ```
+### 🙋‍♂️ Author
+Hitesh Pawar
+Final Year Student, PICT Pune
 
-```
-
-You can paste this directly into your `README.md` file. Let me know if you want to include environment variable setup or `.env` example too.
-```
+Passionate about finance + tech, backend systems, and real-time apps
 
