@@ -71,55 +71,16 @@ export default function AboutContactPage() {
 
   const team: TeamMember[] = [
     {
-      name: "Devansh Kishorprasad Mishra",
-      role: "Founder & CEO",
-      image: devansh,
-      bio: "Computer Science student with a passion for fintech and AI. Leading the development of innovative trading solutions and managing the team's vision.",
-      expertise: ["AI/ML", "High-Frequency Trading", "Cloud Infrastructure"],
-      achievements: ["Forbes 30 Under 30", "Women in Fintech Award"],
-      social: {
-        linkedin: "https://www.linkedin.com/in/devansh-mishra-903357295/",
-        twitter: "#",
-        github: "https://github.com/dkmishra2407"
-      }
-    },
-    {
       name: "Hitesh Prakash Pawar",
-      role: "CTO & Co-founder",
+      role: "CEO & founder",
       image: hitesh,
-      bio: "Computer Science student specializing in system architecture and algorithmic trading. Building scalable solutions and leading the technical development of the platform.",
+      bio: "Information technology student specializing in system architecture and algorithmic trading. Building scalable solutions and leading the technical development of the platform.",
       expertise: ["System Architecture", "High-Frequency Trading", "Cloud Infrastructure"],
       achievements: ["Patent Holder", "Tech Innovation Award"],
       social: {
         linkedin: "https://www.linkedin.com/in/hiteshpawar2804/",
         twitter: "#",
         github: "https://github.com/hiteshp28"
-      }
-    },
-    {
-      name: "Om Nilesh Papdiwal",
-      role: "Lead Developer",
-      image: om1,
-      bio: "Computer Science student with expertise in full-stack development. Leading the frontend and backend development of the trading platform.",
-      expertise: ["React/Node.js", "WebSocket", "Trading Systems"],
-      achievements: ["Open Source Contributor", "Best Code Quality Award"],
-      social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "https://github.com/OmPapdiwal"
-      }
-    },
-    {
-      name: "Rohit Govind Patil",
-      role: "Senior Developer",
-      image: Rohit,
-      bio: "Computer Science student specializing in blockchain and security. Developing secure trading systems and implementing advanced security features.",
-      expertise: ["Blockchain", "Cryptography", "Security"],
-      achievements: ["Security Excellence Award", "Blockchain Pioneer"],
-      social: {
-        linkedin: "#",
-        twitter: "#",
-        github: "#"
       }
     }
   ];
