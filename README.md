@@ -100,14 +100,26 @@ source venv/bin/activate
 pip install -r requirements.txt
 uvicorn combined_app:app --reload
 
-### Node/Express Services
+```
+
+### 🌲 Node/Express Services
+
 ```bash
 cd backend
 npm install
 node index.js
+```
 
-### Frontend (React)
+### ⚛️ Frontend (React)
+
 ```bash
 cd frontend
 npm install
 npm start
+```
+
+```
+
+You can paste this directly into your `README.md` file. Let me know if you want to include environment variable setup or `.env` example too.
+```
+
