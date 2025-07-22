@@ -13,7 +13,6 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/', UserRoutes)
 app.use('/stocks',WatchlistRoutes);
 app.use('/holding', HoldingRoutes);
