@@ -6,6 +6,7 @@ require('dotenv').config();
 const cors = require('cors');
 const db = require('./dbconfig/dbconfig');
 const HoldingRoutes = require('./Routes/HoldingRoutes');
+const path=require('path')
 app.use(express.json())
 app.use(cors({
     origin: '*', // <-- You can restrict to specific origins like 'http://localhost:3000'
