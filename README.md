@@ -1,71 +1,113 @@
-# 📊 Flask Stock Market App with jugaad-data
+# 📈 GrowwUp – Virtual Stock Market Simulator
 
-This is a simple Flask application integrated with [`jugaad-data`](https://pypi.org/project/jugaad-data/) to fetch and process live stock data from NSE (National Stock Exchange, India). The project uses specific versions of Flask and Werkzeug to maintain compatibility.
+**GrowwUp** is a real-time, beginner-friendly virtual stock trading simulator that allows users to understand the basics of the stock market without any financial risk. Designed as an experiential platform, it uses live NSE stock data, simulates buying/selling behavior, and provides portfolio tracking with personalized analysis.
 
-# GrowUp Virtual Stock Simulator
-
-GrowUp is a virtual stock market simulator that allows users to practice trading stocks without risking real money. It's an educational platform designed to help beginners learn about stock market investing in a risk-free environment.
-
-## Key Features of GrowUp
-
-1. **Virtual Portfolio**: Start with a predefined amount of virtual currency to build your investment portfolio.
-
-2. **Real Market Data**: The simulator uses real-time market data from the National Stock Exchange (NSE) of India, providing an authentic trading experience.
-
-3. **Trading Experience**: Users can buy and sell stocks, track performance, and learn about market movements without financial risk.
-
-4. **Performance Analytics**: Track your investment performance with detailed reports, charts, and comparisons against market benchmarks.
-
-5. **Learning Resources**: Access educational content about investing strategies, market analysis, and financial literacy.
-
-6. **Social Features**: Compare performance with friends or other users, participate in trading competitions, and share insights.
-
-## Educational Benefits
-
-- **Risk-Free Learning**: Make mistakes and learn investing principles without losing real money.
-- **Market Familiarity**: Become familiar with stock symbols, order types, and market terminology.
-- **Strategy Testing**: Experiment with various investment strategies to see what works best.
-- **Confidence Building**: Gain confidence before transitioning to real market investing.
-
-## Target Audience
-
-- Students learning about finance and investing
-- New investors wanting to practice before using real funds
-- Finance educators teaching practical market skills
-- Anyone interested in understanding stock markets without financial commitment
-
-GrowUp serves as a bridge between theoretical knowledge about stock markets and practical application, making it an ideal tool for financial education and skills development in investment management.
-
-## 🛠️ Tech Stack
-
-- **Backend**: NodeJs, ExpressJs and FastAPI (Python web framework)
-- **Data Processing**: jugaad-data, pandas
-- **Frontend**: HTML, CSS, JavaScript
-- **Database**: MongoDB 
-- **Other**: Websocket, JWT 
 ---
 
-## ⚙️ Setup & Installation
+## 🚀 Inspiration
 
-Follow the steps below to set up the project from scratch:
+As someone who started trading in my second year, I personally experienced the steep learning curve and confusion around basic market terminologies and trading strategies. GrowwUp is built to solve that gap — giving users a risk-free, real-world learning experience in the world of stock markets.
 
-### ✅ 1. Create and Activate Virtual Environment
+---
 
-**Windows:**
+## 🎯 Features
+
+- 📊 **Live NSE Stock Data** – Integrated using `nse-jugaad-data` (no paid API required)
+- 🔁 **Real-Time Updates** – WebSocket-powered live price streaming
+- 🚀 **Asynchronous FastAPI Backend** – Built with high-performance async I/O
+- 🧠 **Portfolio Summary & Analyzer** – Get insights on portfolio performance and suggestions
+- 🔄 **Order Management** – Simulate buy/sell operations with real-time timestamps
+- ⚡ **TTL Cache** – Efficient caching of stock data to reduce latency and API load
+- 🔐 **User Authentication** – Secure login/register system (planned)
+- 📊 **Future Scope** – AI-driven stock suggestions, mutual funds, BSE & global trade support
+
+---
+
+## 🛠 Tech Stack
+
+### ✅ Backend
+- **Python 3.10**
+- **FastAPI** – Async API framework
+- **cachetools** – For TTL cache
+- **nse-jugaad-data** – Live stock data from NSE
+- **WebSockets** – For real-time communication
+- **Uvicorn** – ASGI server
+
+### ✅ Frontend
+- **React.js 18**
+- **WebSocket API / socket.io-client**
+- **Chart.js / D3.js** (optional for portfolio graphs)
+
+### ✅ Node.js Utilities
+- **Node.js 18**
+- **Express.js 4.18** – Lightweight proxy APIs and utility endpoints
+
+### ✅ Deployment
+- **Render** – Backend hosting (due to support for rewrites/redirects)
+- **AWS EC2** – For scalable and flexible hosting of backend services
+
+---
+
+---
+
+## ⚠️ Key Challenges & Solutions
+
+### 1. 🧵 Thread-Based API Fetching Bottleneck
+- **Issue:** Using one thread per stock caused scalability issues (~8k threads).
+- **Fix:** Replaced with `asyncio` in FastAPI for true concurrency.
+
+### 2. 🌐 High Request Volume
+- **Issue:** Too many HTTP requests for real-time stock updates.
+- **Fix:** Implemented WebSockets + TTL cache to push real-time updates and reduce repeated fetches.
+
+### 3. 🚧 Deployment Limitations
+- **Issue:** Vercel didn't support custom rewrites and WebSocket routing.
+- **Fix:** Shifted backend to Render and AWS EC2 for full flexibility.
+
+### 4. ❌ 422 Error Handling
+- **Issue:** Missing `datetime` dependency in `requirements.txt` caused order timestamps to be `NULL`.
+- **Fix:** Added dependency and ensured validation using Pydantic in FastAPI.
+
+---
+
+## 💡 Future Scope
+
+- 🧠 AI-powered suggestion engine (pros/cons before buying a stock)
+- 📦 Mutual fund simulation
+- 🌍 Support for BSE and global markets
+- 🧑‍🤝‍🧑 Social trading (follow & clone portfolios)
+- 🏆 Gamification (badges, leaderboards)
+
+---
+
+## 📚 What I Learned
+
+- Fundamentals of **stock trading** and financial data
+- Asynchronous programming with **FastAPI + asyncio**
+- Real-time systems with **WebSockets**
+- Scalable design using **caching and async APIs**
+- How to **debug, deploy**, and manage APIs in production-grade environments
+
+---
+
+## 📁 Project Setup
+
+### Backend (FastAPI + WebSocket)
 ```bash
-python -m venv venv
-.\venv\Scripts\activate
+cd Flask
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
+uvicorn combined_app:app --reload
 
-## 🚀 Running the App
-
+### Node/Express Services
 ```bash
-python combined_app.py
-```
+cd backend
+npm install
+node index.js
 
-## 📚 Dependencies
-
-- **Flask** – Web application framework
-- **Werkzeug** – WSGI utility library used by Flask
-- **jugaad-data** – For fetching live market data from NSE
-- **pandas** – Data analysis and manipulation
+### Frontend (React)
+```bash
+cd frontend
+npm install
+npm start
