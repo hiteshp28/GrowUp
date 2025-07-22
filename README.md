@@ -48,28 +48,6 @@ As someone who started trading in my second year, I personally experienced the s
 
 ---
 
----
-
-## ⚠️ Key Challenges & Solutions
-
-### 1. 🧵 Thread-Based API Fetching Bottleneck
-- **Issue:** Using one thread per stock caused scalability issues (~8k threads).
-- **Fix:** Replaced with `asyncio` in FastAPI for true concurrency.
-
-### 2. 🌐 High Request Volume
-- **Issue:** Too many HTTP requests for real-time stock updates.
-- **Fix:** Implemented WebSockets + TTL cache to push real-time updates and reduce repeated fetches.
-
-### 3. 🚧 Deployment Limitations
-- **Issue:** Vercel didn't support custom rewrites and WebSocket routing.
-- **Fix:** Shifted backend to Render and AWS EC2 for full flexibility.
-
-### 4. ❌ 422 Error Handling
-- **Issue:** Missing `datetime` dependency in `requirements.txt` caused order timestamps to be `NULL`.
-- **Fix:** Added dependency and ensured validation using Pydantic in FastAPI.
-
----
-
 ## 💡 Future Scope
 
 - 🧠 AI-powered suggestion engine (pros/cons before buying a stock)
@@ -77,16 +55,6 @@ As someone who started trading in my second year, I personally experienced the s
 - 🌍 Support for BSE and global markets
 - 🧑‍🤝‍🧑 Social trading (follow & clone portfolios)
 - 🏆 Gamification (badges, leaderboards)
-
----
-
-## 📚 What I Learned
-
-- Fundamentals of **stock trading** and financial data
-- Asynchronous programming with **FastAPI + asyncio**
-- Real-time systems with **WebSockets**
-- Scalable design using **caching and async APIs**
-- How to **debug, deploy**, and manage APIs in production-grade environments
 
 ---
 
