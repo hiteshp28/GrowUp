@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 import { BarChart3, User, LogOut, Info, BookOpen, LineChart, Star, PieChart, FileText } from 'lucide-react';
+import image from "../../assets/image.png";
 
 const Navbar = () => {
   const { isAuthenticated, setUser } = useAuthStore();
@@ -26,7 +27,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center text-xl font-bold text-gray-800">
               <img 
-                src="/assets/image.png" 
+                src={image}
                 alt="GrowUp Logo" 
                 className="h-8 w-8 mr-2"
               />
