@@ -2,11 +2,7 @@ import React, { useState } from 'react';
 import { Users, Target, Globe, Github, Linkedin, Twitter, Award, Briefcase, Code, Coffee, Database, Server, Cloud, Brain, Link2, MapPin, Phone, Mail, Clock, Facebook, Instagram } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { toast } from 'react-toastify';
-import devansh from "../../assets/devansh.jpg";
 import hitesh from "../../assets/hitesh.jpg";
-import om1 from "../../assets/om1.jpeg";
-import Rohit from "../../assets/Rohit.jpeg";
-
 // Types
 interface ContactForm {
   name: string;
@@ -70,19 +66,7 @@ export default function AboutContactPage() {
   ];
 
   const team: TeamMember[] = [
-    {
-      name: "Hitesh Prakash Pawar",
-      role: "CEO & founder",
-      image: hitesh,
-      bio: "Information technology student specializing in system architecture and algorithmic trading. Building scalable solutions and leading the technical development of the platform.",
-      expertise: ["System Architecture", "High-Frequency Trading", "Cloud Infrastructure"],
-      achievements: ["Patent Holder", "Tech Innovation Award"],
-      social: {
-        linkedin: "https://www.linkedin.com/in/hiteshpawar2804/",
-        twitter: "#",
-        github: "https://github.com/hiteshp28"
-      }
-    }
+  
   ];
 
   const technologies = [
@@ -301,60 +285,6 @@ export default function AboutContactPage() {
                   </div>
                   <h3 className="text-lg font-semibold text-center text-gray-900 mb-2">{tech.name}</h3>
                   <p className="text-sm text-center text-gray-600">{tech.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Team Section */}
-          <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Our Team</h2>
-            <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
-              {team.map((member, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden transform hover:scale-105 transition-transform duration-300">
-                  <div className="relative h-56 flex items-center justify-center bg-gray-50">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-48 h-48 object-cover rounded-full"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
-                    <p className="text-sm text-blue-600 mb-2">{member.role}</p>
-                    <p className="text-gray-600 text-sm mb-4">{member.bio}</p>
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Expertise</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {member.expertise.map((skill, i) => (
-                          <span key={i} className="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Achievements</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {member.achievements.map((achievement, i) => (
-                          <span key={i} className="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">
-                            {achievement}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                    <div className="flex space-x-4">
-                      <a href={member.social.linkedin} className="text-gray-600 hover:text-blue-600" target="_blank" rel="noopener noreferrer">
-                        <Linkedin className="h-5 w-5" />
-                      </a>
-                      <a href={member.social.twitter} className="text-gray-600 hover:text-blue-400" target="_blank" rel="noopener noreferrer">
-                        <Twitter className="h-5 w-5" />
-                      </a>
-                      <a href={member.social.github} className="text-gray-600 hover:text-gray-900" target="_blank" rel="noopener noreferrer">
-                        <Github className="h-5 w-5" />
-                      </a>
-                    </div>
-                  </div>
                 </div>
               ))}
             </div>
